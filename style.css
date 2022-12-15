@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     border: 5px solid black;
-    background: blue;
+    background: rgb(33, 10, 230);
     width: 23em;
     height: 37em;
     border-radius: 5%;
@@ -28,16 +28,70 @@
     display: flex;
     flex-direction: row;
     color: white;
+    font-family: trebuchet ms;
 }
 #azul{
     color: blue;
+    font-style: italic;
 }
 #amarillo{
     color: yellow;
+    font-style: italic;
 }
 #verde{
     color: green;
+    font-style: italic;
 }
 #rojo{
     color: red;
+    font-style: italic;
+}
+.logoNintendo{
+    display: flex;
+    align-items: center;
+    border: 3px solid black;
+    margin: 10px;
+    border-radius: 25%;
+    height: 20px;
+    padding: 2px;
+    font-family: Trebuchet MS;
+}
+.mandos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em;
+
+}
+#mandoCruz{
+
+}
+#botonRedondo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    background: black;
+    border-radius: 50%;
+    color: white;
+    font-family: Trebuchet MS;
+    margin: 1em;
+}
+.botonesInferiores{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#botonEstirado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1em;
+    width: 4em;
+    background: black;
+    border-radius: 25%;
+    color: white;
+    font-family: Trebuchet MS;
+    margin: 2em;
 }
