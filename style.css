@@ -5,7 +5,7 @@
     border: 5px solid black;
     background: rgb(33, 10, 230);
     width: 23em;
-    height: 37em;
+    height: 35em;
     border-radius: 5%;
     padding: 1em;
 }
@@ -49,27 +49,33 @@
 .logoNintendo{
     display: flex;
     align-items: center;
+    justify-content: center;
     border: 3px solid black;
     margin: 10px;
     border-radius: 25%;
-    height: 20px;
+    height: 1em;
+    width: 5em;
     padding: 2px;
     font-family: Trebuchet MS;
 }
 .mandos{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin: 1em;
-
+    margin: 1em
 }
 #mandoCruz{
-
+    display: flex;
+    justify-content: flex-start;
+    width: 6em;
+    height: 6em;
+}
+#vacio{
+    width: 5em;
 }
 #botonRedondo{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 3em;
     width: 3em;
     background: black;
@@ -77,6 +83,8 @@
     color: white;
     font-family: Trebuchet MS;
     margin: 1em;
+    box-shadow: 0em 0.3em grey; /*sombra del botón*/
+    cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
 }
 .botonesInferiores{
     display: flex;
@@ -94,4 +102,15 @@
     color: white;
     font-family: Trebuchet MS;
     margin: 2em;
+    box-shadow: 0em 0.2em 0em grey; /*sombra del botón*/
+    cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
+}
+/*efecto pulsador*/
+#botonEstirado:active{
+    transform: translateY(0.2em);
+    box-shadow: 0em 0em 0em grey;
+}
+#botonRedondo:active{
+    transform: translateY(0.2em);
+    box-shadow: 0em 0em 0em grey;
 }
