@@ -1,0 +1,43 @@
+.cuerpoExterior{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid black;
+    background: blue;
+    width: 23em;
+    height: 37em;
+    border-radius: 5%;
+    padding: 1em;
+}
+.marcoPantalla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    width: 20em;
+    height: 18em;
+    border-radius: 5%;
+    padding: 1em;
+}
+.pantalla{
+    background: grey;
+    width: 15em;
+    height: 15em;
+}
+.modeloColor{
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+#azul{
+    color: blue;
+}
+#amarillo{
+    color: yellow;
+}
+#verde{
+    color: green;
+}
+#rojo{
+    color: red;
+}
