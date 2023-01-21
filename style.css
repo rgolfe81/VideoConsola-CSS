@@ -1,67 +1,97 @@
+body{
+    /* font-family: Trebuchet MS; */
+}
 .cuerpoExterior{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid black;
-    background: rgb(33, 10, 230);
-    width: 23em;
-    height: 35em;
-    border-radius: 5%;
-    padding: 1em;
+    width: 18em;
+    height: 29em;
+    border-radius: 1em;
+    margin: 2em auto; /* centrado cuerpo exterior, con 2em margin-top*/
+    background-color: rgb(75, 75, 215);
+    outline: 4px ridge rgba(75, 75, 215, .8);
+    border-top-left-radius: 1em 1em; /* curvatura linea inferior marco pantalla */
+    border-top-right-radius: 1em 1em; /* curvatura linea inferior marco pantalla */
+    border-bottom-left-radius: 15em 1em; /* curvatura linea inferior marco pantalla */
+    border-bottom-right-radius: 15em 1em; /* curvatura linea inferior marco pantalla */
 }
 .marcoPantalla{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: black;
-    width: 20em;
-    height: 18em;
-    border-radius: 5%;
-    padding: 1em;
+    justify-content: center;
+    background: rgb(33, 32, 32);
+    width: 16em;
+    height: 14em;
+    border-top-left-radius: 1em 1em; /* curvatura linea inferior marco pantalla */
+    border-top-right-radius: 1em 1em; /* curvatura linea inferior marco pantalla */
+    border-bottom-left-radius: 15em 1em; /* curvatura linea inferior marco pantalla */
+    border-bottom-right-radius: 15em 1em; /* curvatura linea inferior marco pantalla */
+    margin: 1em;
 }
 .pantalla{
-    background: grey;
-    width: 15em;
-    height: 15em;
+    background: rgb(128, 150, 128);
+    width: 10em;
+    height: 9em;
+    margin-top: 1em;
+
 }
 .modeloColor{
+    /* background-color: beige; */
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
-    color: white;
-    font-family: trebuchet ms;
+    height: 2.5em;
+    width: 9em;
+}
+.fontGameboy{
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    height: 2em;
+    font-family: 'Mukta', sans-serif;
+    color: rgb(95, 125, 140);
+    font-weight:bold;
+    font-size: large;
+    font-style: italic;
+}
+.fontColor{
+    /* background-color: blueviolet; */
+    display: flex;
+    height: 2em;
+    align-items: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bold;
 }
 #azul{
-    color: blue;
-    font-style: italic;
+    color: rgb(75, 75, 215);
 }
 #amarillo{
     color: yellow;
-    font-style: italic;
 }
 #verde{
     color: green;
-    font-style: italic;
 }
 #rojo{
     color: red;
-    font-style: italic;
 }
 .logoNintendo{
     display: flex;
     align-items: center;
     justify-content: center;
     border: 3px solid black;
-    margin: 10px;
+    /* margin: 10px; */
     border-radius: 1em;
     height: 1em;
     width: 5em;
-    padding: 2px;
-    font-family: Trebuchet MS;
+
 }
 .mandos{
     display: flex;
     flex-direction: row;
-    margin: 1em
+    /* margin: 1em; */
 }
 #mandoCruz{
     display: flex;
@@ -73,7 +103,7 @@
     width: 6em;
     top: 1em;
     border-radius: 1em;
-    box-shadow: 0em 0.3em grey; /*sombra del botón*/
+    box-shadow: 0em 0.1em grey; /*sombra del botón*/
     cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
 }
 #mandoCruz:after{
@@ -83,10 +113,10 @@
     position: absolute;
     width: 2em;
     left: 2em;
-    border-radius:10em;
+    border-radius: 10em;
 }
 #vacio{
-    width: 5em;
+    /* width: 5em; */
 }
 #botonRedondoB{
     display: flex;
@@ -99,7 +129,7 @@
     color: white;
     font-family: Trebuchet MS;
     margin: 1em;
-    box-shadow: 0em 0.3em grey; /*sombra del botón*/
+    box-shadow: 0em 0.1em grey; /*sombra del botón*/
     cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
 }
 #botonRedondoA{
@@ -114,8 +144,8 @@
     border-radius: 50%;
     color: white;
     font-family: Trebuchet MS;
-    margin: 1em;
-    box-shadow: 0em 0.3em grey; /*sombra del botón*/
+    /* margin: 1em; */
+    box-shadow: 0em 0.1em grey; /*sombra del botón*/
     cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
 }
 .botonesInferiores{
@@ -133,24 +163,24 @@
     border-radius: 25%;
     color: white;
     font-family: Trebuchet MS;
-    margin: 2em;
-    box-shadow: 0em 0.2em 0em grey; /*sombra del botón*/
+    /* margin: 2em; */
+    box-shadow: 0em 0.1em 0em grey; /*sombra del botón*/
     cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
 }
 /*efecto pulsador*/
 #botonEstirado:active{
-    transform: translateY(0.2em);
+    transform: translateY(0.1em);
     box-shadow: 0em 0em 0em grey;
 }
 #botonRedondoB:active{
-    transform: translateY(0.2em);
+    transform: translateY(0.1em);
     box-shadow: 0em 0em 0em grey;
 }
 #botonRedondoA:active{
-    transform: translateY(0.2em);
+    transform: translateY(0.1em);
     box-shadow: 0em 0em 0em grey;
 }
 #mandoCruz:active{
-    transform: translateY(0.2em);
+    transform: translateY(0.1em);
     box-shadow: 0em 0em 0em grey;
 }
