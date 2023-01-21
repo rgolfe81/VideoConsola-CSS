@@ -1,20 +1,16 @@
-body{
-    /* font-family: Trebuchet MS; */
-}
 .cuerpoExterior{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 18em;
     height: 29em;
-    border-radius: 1em;
     margin: 2em auto; /* centrado cuerpo exterior, con 2em margin-top*/
     background-color: rgb(75, 75, 215);
-    outline: 4px ridge rgba(75, 75, 215, .8);
-    border-top-left-radius: 1em 1em; /* curvatura linea inferior marco pantalla */
-    border-top-right-radius: 1em 1em; /* curvatura linea inferior marco pantalla */
-    border-bottom-left-radius: 15em 1em; /* curvatura linea inferior marco pantalla */
-    border-bottom-right-radius: 15em 1em; /* curvatura linea inferior marco pantalla */
+    border-top-left-radius: 1em 1em; /* curvatura linea inferior carcasa exterior */
+    border-top-right-radius: 1em 1em; /* curvatura linea inferior carcasa exterior */
+    border-bottom-left-radius: 15em 3em; /* curvatura linea inferior carcasa exterior */
+    border-bottom-right-radius: 15em 3em; /* curvatura linea inferior carcasa exterior */
+    box-shadow: 0.2em 0.2em 0.8em, -0.2em -0.2em 0.8em; /* sombra por los cuatro lados para el exterior*/
 }
 .marcoPantalla{
     display: flex;
@@ -29,16 +25,16 @@ body{
     border-bottom-left-radius: 15em 1em; /* curvatura linea inferior marco pantalla */
     border-bottom-right-radius: 15em 1em; /* curvatura linea inferior marco pantalla */
     margin: 1em;
+    box-shadow: 0.2em 0.2em 0.4em, -0.2em -0.2em 0.4em; /* sombra por los cuatro lados*/
 }
 .pantalla{
     background: rgb(128, 150, 128);
     width: 10em;
     height: 9em;
     margin-top: 1em;
-
+    box-shadow: 0.1em 0.1em 0.2em inset, -0.1em -0.1em 0.2em inset; /* sombra interna en display*/
 }
 .modeloColor{
-    /* background-color: beige; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,18 +43,16 @@ body{
     width: 9em;
 }
 .fontGameboy{
-    /* background-color: brown; */
     display: flex;
     align-items: center;
     height: 2em;
-    font-family: 'Mukta', sans-serif;
+    font-family: 'Mukta';
     color: rgb(95, 125, 140);
-    font-weight:bold;
+    font-weight: bold;
     font-size: large;
     font-style: italic;
 }
 .fontColor{
-    /* background-color: blueviolet; */
     display: flex;
     height: 2em;
     align-items: center;
@@ -81,106 +75,107 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid black;
-    /* margin: 10px; */
+    border: 3px inset blue; /* borde efecto hundido */
     border-radius: 1em;
     height: 1em;
     width: 5em;
-
+    /* texto con efecto hundido */
+    text-shadow: rgba(0,0,0,0.1) -1px 0, rgba(0,0,0,0.1) 0 -1px,
+   rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
+   rgba(0,0,0,0.1) -1px -1px, rgba(255,255,255,0.1) 1px 1px;
+    /*--------------------------*/
+    color: blue;
+    font-family: 'Mukta';
+    font-weight: bold;
 }
 .mandos{
     display: flex;
     flex-direction: row;
-    /* margin: 1em; */
+    width: 15em;
+    height: 7em;
 }
-#mandoCruz{
+#mandoCruz{ /* segmento horizontal */
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
-    height: 2em;
+    background: rgb(33, 32, 32);
     position: relative;
-    width: 6em;
-    top: 1em;
-    border-radius: 1em;
-    box-shadow: 0em 0.1em grey; /*sombra del botón*/
-    cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
+    top: 1.5em;
+    height: 1.5em;
+    width: 4em;
+    border-radius: 0.2em;
+    box-shadow: 0em 0em 0.2em; /*sombra del botón*/
+    cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón */
 }
-#mandoCruz:after{
-    background: black;
+#mandoCruz:after{ /* segmento vertical */
+    background: rgb(33, 32, 32);
     content: "";
-    height: 6em;
     position: absolute;
-    width: 2em;
-    left: 2em;
-    border-radius: 10em;
+    left: 1.25em;
+    height: 4em;
+    width: 1.5em;
+    border-radius: 0.2em;
+    box-shadow: 0em 0em 0.2em; /*sombra del botón*/
 }
-#vacio{
-    /* width: 5em; */
-}
-#botonRedondoB{
+.botonRedondo{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3em;
-    width: 3em;
-    background: black;
+    height: 2.5em;
+    width: 2.5em;
     border-radius: 50%;
-    color: white;
-    font-family: Trebuchet MS;
-    margin: 1em;
-    box-shadow: 0em 0.1em grey; /*sombra del botón*/
+    background: rgb(33, 32, 32);
+    color: rgb(95, 125, 140);
+    font-family: 'Mukta';
+    box-shadow: 0.1em 0.1em 0.2em black, -0.1em -0.1em 0.2em black; /*sombra del botón*/
     cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
 }
-#botonRedondoA{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3em;
-    width: 3em;
+#posicionBotonB{
     position: relative;
-    top: -2em;
-    background: black;
-    border-radius: 50%;
-    color: white;
-    font-family: Trebuchet MS;
-    /* margin: 1em; */
-    box-shadow: 0em 0.1em grey; /*sombra del botón*/
-    cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
+    top: 1.5em;
+    left: 7em;
+}
+#posicionBotonA{
+    position: relative;
+    left: 8.5em;
 }
 .botonesInferiores{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content:space-around;
+    width: 5em;
 }
-#botonEstirado{
+.botonEstirado{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1em;
-    width: 4em;
-    background: black;
-    border-radius: 25%;
-    color: white;
-    font-family: Trebuchet MS;
-    /* margin: 2em; */
-    box-shadow: 0em 0.1em 0em grey; /*sombra del botón*/
+    height: 0.7em;
+    width: 2em;
+    background: rgb(33, 32, 32);
+    border-radius: 1em;
+    box-shadow: 0.1em 0.1em 0.2em black;/*sombra del botón*/
     cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
 }
+.textoBotonEstirado{
+    font-size: 0.7em;
+    font-family: 'Mukta';
+    /* texto con efecto hundido */
+    text-shadow: rgba(0,0,0,0.1) -1px 0, rgba(0,0,0,0.1) 0 -1px,
+   rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
+   rgba(0,0,0,0.1) -1px -1px, rgba(255,255,255,0.1) 1px 1px;
+    /*--------------------------*/
+    color: blue;
+}
 /*efecto pulsador*/
-#botonEstirado:active{
+.botonEstirado:active{
     transform: translateY(0.1em);
-    box-shadow: 0em 0em 0em grey;
+    box-shadow: 0em 0em 0em;
 }
-#botonRedondoB:active{
+.botonRedondo:active{
     transform: translateY(0.1em);
-    box-shadow: 0em 0em 0em grey;
-}
-#botonRedondoA:active{
-    transform: translateY(0.1em);
-    box-shadow: 0em 0em 0em grey;
+    box-shadow: 0em 0em 0em;
 }
 #mandoCruz:active{
     transform: translateY(0.1em);
-    box-shadow: 0em 0em 0em grey;
+    box-shadow: 0em 0em 0em;
 }
