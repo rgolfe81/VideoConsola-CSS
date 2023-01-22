@@ -27,12 +27,43 @@
     margin: 1em;
     box-shadow: 0.2em 0.2em 0.4em, -0.2em -0.2em 0.4em; /* sombra por los cuatro lados*/
 }
+.positionLed{
+    /* background-color: aqua; */
+    width: 15em;
+    position: relative;
+    top: 4em;
+    left: 0.7em;
+}
+#led{
+    background-color: rgb(150, 0, 0);
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+}
+#led:hover{
+    background-color: rgb(255, 0, 0);
+}
+.positionPower{
+    /* background-color: yellow; */
+    width: 15em;
+    position: relative;
+    top: 4em;
+    left: 0em;
+}
+.textoPower{
+    font-size: 0.7em;
+    font-family: 'Mukta';
+    color: rgb(75, 75, 215);
+}
 .pantalla{
-    background: rgb(128, 150, 128);
+    background-image: url(imagenes/displayOff.png);
     width: 10em;
     height: 9em;
-    margin-top: 1em;
     box-shadow: 0.1em 0.1em 0.2em inset, -0.1em -0.1em 0.2em inset; /* sombra interna en display*/
+}
+.pantalla:hover{
+    background-image: url(imagenes/diplayOn.png);
+    background-size: 100%;
 }
 .modeloColor{
     display: flex;
@@ -59,7 +90,7 @@
     font-family: 'Gloria Hallelujah', cursive;
     font-weight: bold;
 }
-#azul{
+.azul{
     color: rgb(75, 75, 215);
 }
 #amarillo{
@@ -127,7 +158,7 @@
     background: rgb(33, 32, 32);
     color: rgb(95, 125, 140);
     font-family: 'Mukta';
-    box-shadow: 0.1em 0.1em 0.2em black, -0.1em -0.1em 0.2em black; /*sombra del botón*/
+    box-shadow: 0.1em 0.1em 0.2em rgb(39, 38, 38), -0.1em -0.1em 0.2em rgb(39, 38, 38);/*sombra del botón*/
     cursor: pointer; /* aparece la mano cuando pasa el ratón por el botón*/
 }
 #posicionBotonB{
