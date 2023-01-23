@@ -12,7 +12,7 @@ Estos son los lenguajes utilizados:
 ## Imágenes
 Esta es la imágen del proyecto finalizado.
 
-<img src="imagenes/GameBoyColorAzulRgsV2.png" width="300" >
+<img src="imagenes/GameBoyColorRgsV2.png" width="300" >
 
 ## Funcionalidades
 1. Los botones utilizados hacen el efecto de pulsarse al hacer click sobre ellos, aunque verdaderamente no realizan ninguna función.
